@@ -1,23 +1,38 @@
-<template>
-  <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { tabsRoutes } from './routes/index'
 
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
   },
+  data() {
+    return {
+      tabsRoutes
+    }
+  }
 
-  data: () => ({
-    //
-  }),
 }
 </script>
+
+<template>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-card>
+          <v-tabs
+            background-color="primary"
+          >
+            <v-tab
+              v-for="tab in tabsRoutes"
+              :key="tab.name"
+              :to="tab.path"
+            >
+              {{ tab.name }}
+            </v-tab>
+          </v-tabs>
+          <router-view />
+        </v-card>
+      </v-container>
+    </v-main>
+  </v-app>
+</template>
