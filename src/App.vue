@@ -1,38 +1,28 @@
 <script>
-import { tabsRoutes } from './routes/index'
-
+import TabsComponent from './components/tabs/TabsComponent.vue'
 export default {
   name: 'App',
   components: {
-  },
-  data() {
-    return {
-      tabsRoutes
-    }
+    TabsComponent,
   }
-
 }
 </script>
 
 <template>
   <v-app>
     <v-main>
-      <v-container>
-        <v-card>
-          <v-tabs
-            background-color="primary"
-          >
-            <v-tab
-              v-for="tab in tabsRoutes"
-              :key="tab.name"
-              :to="tab.path"
-            >
-              {{ tab.name }}
-            </v-tab>
-          </v-tabs>
-          <router-view />
-        </v-card>
-      </v-container>
+      <v-row justify="center">
+        <v-col cols="12" md="6">
+          <v-card>
+            <TabsComponent />
+            <router-view v-slot="{ Component }">
+              <keep-alive>
+                <component :is="Component" />
+              </keep-alive>
+            </router-view>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>

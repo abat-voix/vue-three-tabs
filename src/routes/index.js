@@ -1,4 +1,4 @@
-import HelloWorld from '../components/HelloWorld.vue'
+import Home from '../components/Home.vue'
 import OneComponent from '../components/one/OneComponent.vue'
 import TwoComponent from '../components/two/TwoComponent.vue'
 import ThreeComponent from '../components/three/ThreeComponent.vue'
@@ -7,7 +7,7 @@ import ThreeComponent from '../components/three/ThreeComponent.vue'
 const homeRoute = {
   path: '/',
   name: 'Home',
-  component: HelloWorld,
+  component: Home,
 }
 
 export const tabsRoutes = [

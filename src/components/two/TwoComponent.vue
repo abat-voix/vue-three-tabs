@@ -1,14 +1,18 @@
 <script>
+import CounterComponent from '../base/counter/CounterComponent.vue'
+import TabContentWrapper from '../base/tabContentWrapper/TabContentWrapper.vue'
+
 export default {
-  name: 'TwoComponent'
+  name: 'TwoComponent',
+  components: {
+    CounterComponent,
+    TabContentWrapper
+  }
 }
 </script>
 
 <template>
-  <div>TwoComponent</div>
+  <TabContentWrapper title="TwoComponent">
+    <CounterComponent />
+  </TabContentWrapper>
 </template>
-
-
-<style scoped>
-
-</style>
