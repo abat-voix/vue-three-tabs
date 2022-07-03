@@ -8,11 +8,6 @@ export default {
       tabsRoutes
     }
   },
-  methods: {
-    goTo(path) {
-      this.$router.push({ path })
-    },
-  }
 }
 </script>
 
@@ -23,17 +18,9 @@ export default {
     <v-tab
       v-for="tab in tabsRoutes"
       :key="tab.name"
-      @click="goTo(tab.path)"
+      :to="tab.path"
     >
       {{ tab.name }}
-      <v-btn
-        rounded
-        color="secondary"
-        size="x-small"
-        @click.stop="goTo('/')"
-      >
-        x
-      </v-btn>
     </v-tab>
   </v-tabs>
 </template>
