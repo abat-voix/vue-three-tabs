@@ -12,7 +12,7 @@ export default {
   <v-app>
     <v-main>
       <v-row justify="center">
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="6">
           <v-card>
             <TabsComponent />
             <router-view v-slot="{ Component }">
