@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+Разработать на vue 3 одностраничное приложение с тремя вкладками с использованием vuetify tabs (https://next.vuetifyjs.com/en/components/tabs/) и vue-router (https://router.vuejs.org/).
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Каждая вкладка должна иметь свой адрес маршрутизации 
+и при активации должна подменять его в строке браузера.
+Также выбор вкладки должен показывать свой компонент на странице
+со счетчиком и кнопкой, увеличивающей значение счетчика. 
+Необходимо реализовать три отдельных компонента для трех вкладок (с адресами маршрутизации /one, /two и /three).
+Переход на приложение с адресом маршрутизации должен активировать соответствующую вкладку и показывать выбранный компонент.
+Переключение между вкладками должно сохранять значение счетчика.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Сделать возможность закрыть вкладку и открыть закрытую
+(при закрытии и повторном открытии значение счетчика компонента вкладки сбрасывается в начальное).
