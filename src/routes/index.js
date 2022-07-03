@@ -1,7 +1,7 @@
-import Home from '../components/Home.vue'
-import OneComponent from '../components/one/OneComponent.vue'
-import TwoComponent from '../components/two/TwoComponent.vue'
-import ThreeComponent from '../components/three/ThreeComponent.vue'
+const Home = () => import('../components/Home.vue')
+const OneComponent = () => import('../components/one/OneComponent.vue')
+const TwoComponent = () => import('../components/two/TwoComponent.vue')
+const ThreeComponent = () => import('../components/three/ThreeComponent.vue')
 
 
 const homeRoute = {
