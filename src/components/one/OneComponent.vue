@@ -1,5 +1,5 @@
 <script>
-import  CounterComponent from '../base/counter/CounterComponent.vue'
+import  CounterComponent from '@/components/base/counter/CounterComponent.vue'
 
 export default {
   name: 'OneComponent',
